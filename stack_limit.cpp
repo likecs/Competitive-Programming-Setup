@@ -5,26 +5,14 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+#include <sys/resource.h>
+
 int main() {
-	const rlim_t kStackSize = 8 * 1024 * 1024;   // min stack size = 8 MB
-    struct rlimit rl;
-    int result;
-
-    result = getrlimit(RLIMIT_STACK, &rl);
-    if (result == 0)
-    {
-        if (rl.rlim_cur < kStackSize)
-        {
-            rl.rlim_cur = kStackSize;
-            result = setrlimit(RLIMIT_STACK, &rl);
-            if (result != 0)
-            {
-                fprintf(stderr, "setrlimit returned result = %d\n", result);
-            }
-        }
-    }
-
-    //write your code below
+    const rlim_t Stack_size = 32L * 1024 * 1024;
+    struct rlimit lim = {Stack_size, Stack_size};
+    if(setrlimit(RLIMIT_STACK, &lim) == -1) assert(false);
     
-	return 0;
+    //Write your code below
+
+    return 0;
 }

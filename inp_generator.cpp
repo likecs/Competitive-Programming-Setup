@@ -1,12 +1,19 @@
 //Below code is used to generate some random test cases
 
-#include <bits/stdc++.h>
+#include <iostream>
+#include <cstdio>
+#include <cmath>
+#include <algorithm>
+#include <vector>
+#include <set>
+#include <map>
 using namespace std;
 
 typedef long long LL;
 
-const int mod = 1e9;
-const LL modl = 1e17;
+const int mod = 1e2;
+const int mod2 = 10;
+const LL modl = 1e18;
 
 int main() {
 	#ifndef ONLINE_JUDGE
@@ -14,13 +21,15 @@ int main() {
 	#endif
 	srand(unsigned(time(0)));
 	int t;
-	t = 10;
+	t = 1000;
 	printf("%d\n", t);
 	while (t--) {
-		LL n;
-		n = (LL)rand() * (LL)rand() % modl + 1;
-		// n = rand() % mod + 1;
-		printf("%lld\n", n);
+		int n, q, x, y, l, r;
+		n = rand()%mod + 1;
+		printf("%d\n", n);
+		
+		// LL n;
+		// n = (LL)rand() * (LL)rand() % modl + 1;
 	}
 	return 0;
 }

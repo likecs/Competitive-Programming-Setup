@@ -1,4 +1,8 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <fstream>
+#include <cstdio>
+#include <cmath>
+#include <algorithm>
 using namespace std;
 
 int main() {
@@ -10,11 +14,11 @@ int main() {
 	output2.open("res.txt", ios::in);
 
 	if (!output1) {
-		cerr<<"Can't open output file 1\n";
+		cout<<"Can't open output file 1\n";
 		return 0;
 	}
 	if (!output2) {
-		cerr<<"Can't open output file 2\n";
+		cout<<"Can't open output file 2\n";
 		return 0;	
 	}
 
@@ -35,20 +39,20 @@ int main() {
 			pos += 1;
 		}
 		if (c || a!=b) {
-			cerr<<"Output differs at line number : "<<lines<<"\n";
-			cerr<<"The characters diifer at position : "<<pos+1<<"\n";
+			cout<<"Output differs at line number : "<<lines<<"\n";
+			cout<<"The characters diifer at position : "<<pos+1<<"\n";
 			if (a < b) {
-				cerr<<"Output in file out.txt has shorter length\n";
+				cout<<"Output in file out.txt has shorter length\n";
 			}
 			else if (b < a) {
-				cerr<<"Output in file res.txt has shorter length\n";		
+				cout<<"Output in file res.txt has shorter length\n";		
 			}
 			return 0;
 		}
 		lines += 1;
 	}
-	cerr<<"Scanned a total of "<<lines<<" lines from both files\n";
-	cerr<<"Both output files are same\n";
+	cout<<"Scanned a total of "<<lines<<" lines from both files\n";
+	cout<<"Both output files are same\n";
 	output1.close();
 	output2.close();
 	return 0;
