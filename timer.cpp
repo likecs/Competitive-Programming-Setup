@@ -1,6 +1,3 @@
-//Below code is used to calculate the time for execution of your program
-//The time, in seconds, is written on the error screen
-
 #include <bits/stdc++.h>
 using namespace std;
 

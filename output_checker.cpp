@@ -39,20 +39,20 @@ int main() {
 			pos += 1;
 		}
 		if (c || a!=b) {
-			cout<<"Output differs at line number : "<<lines<<"\n";
-			cout<<"The characters diifer at position : "<<pos+1<<"\n";
+			cout << "Output differs at line number : "<< lines << "\n";
+			cout << "The characters differ at position : " << (pos + 1) << "\n";
 			if (a < b) {
-				cout<<"Output in file out.txt has shorter length\n";
+				cout << "Output in file out.txt has shorter length\n";
 			}
 			else if (b < a) {
-				cout<<"Output in file res.txt has shorter length\n";		
+				cout << "Output in file res.txt has shorter length\n";		
 			}
 			return 0;
 		}
 		lines += 1;
 	}
-	cout<<"Scanned a total of "<<lines<<" lines from both files\n";
-	cout<<"Both output files are same\n";
+	cout << "Scanned a total of " << (lines - 1) << " lines from both files\n";
+	cout << "Both output files are same\n";
 	output1.close();
 	output2.close();
 	return 0;
