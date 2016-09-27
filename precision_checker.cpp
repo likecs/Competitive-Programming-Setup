@@ -5,6 +5,7 @@
 #include <algorithm>
 using namespace std;
 
+//Set the precision limit you want for comparing the 2 output files
 const double EPS = 1e-7;
 
 int main() {

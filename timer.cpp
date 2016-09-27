@@ -14,6 +14,7 @@ int main() {
 	//write your code below
 
 	//include this at the end of your code to get the time
-	cerr<<tick();
+	cerr << tick();		//Prints execution time on error screen
+
 	return 0;
 }
