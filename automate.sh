@@ -5,9 +5,9 @@ g++ -std=c++11 checker.cpp -o checker
 g++ -std=c++11 output_checker.cpp -o outputgen
 counter=5
 while [[ $counter -gt 0 ]]; do
-	./inputgen
-	./work
-	./checker
+	timeout 2s ./inputgen
+	timeout 2s ./work
+	timeout 2s  ./checker
 	line=$(./outputgen)
 	echo $line
 	if [[ ${line:0:1} != 'S' ]]; then

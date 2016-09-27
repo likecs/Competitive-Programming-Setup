@@ -5,9 +5,9 @@ g++ -std=c++11 -O2 tester.cpp -o tester
 g++ -std=c++11 -O2 precision_checker.cpp -o precisionc
 counter=1
 while [[ $counter -gt 0 ]]; do
-	./inputg
-	./result
-	./tester
+	timeout 2s ./inputg
+	timeout 2s ./result
+	timeout 2s ./tester
 	line=$(./precisionc)
 	echo $line
 	if [[ ${line:0:1} != 'S' ]]; then
