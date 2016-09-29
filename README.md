@@ -32,3 +32,9 @@ Below is a brief description of the files:
 
 * timer.cpp
 > It contains a small code snippet to print the time taken by the program to execute the given test case data.
+
+* java_template.java
+> It conatins the code template for java solutions.
+
+* python_template.py
+> It conatins the code template for python solutions.
