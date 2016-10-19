@@ -45,4 +45,4 @@ def power(a,b,m):
 	return x	
 
 if __name__ == "__main__":
-	#code goes below79
+	#code goes below
