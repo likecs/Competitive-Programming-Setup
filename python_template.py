@@ -1,6 +1,7 @@
 #AUTHOR 		: 	BHUVNESH JAIN
 #INSTITUTION	: 	BITS, PILANI
 
+from math import *
 MAX = 100005
 MOD = 1000000007
 def add(a,b,c):
@@ -42,7 +43,20 @@ def power(a,b,m):
 			x=mod(x,y,m)
 		y=mod(y,y,m)
 		b>>=1
-	return x	
+	return x
+
+def alldivisors(n) : 
+    	list = []  
+   	arr = []
+    	for i in range(1, int(sqrt(n) + 1)) :
+        	if (n % i == 0): 
+            	         if (n / i == i) : 
+                		arr+=[i]
+            	else:
+                	arr+=[i]
+                	list.append(n//i)  
+        arr += list[::-1]
+        return arr
 
 if __name__ == "__main__":
 	#code goes below
